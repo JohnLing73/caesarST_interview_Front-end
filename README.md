@@ -3,7 +3,7 @@
 > 1. 使用performance analyzer，例如:dev tools 裡的lighthouse 或 pagespeed來找出瓶頸。  
 > 2. 解決方式:  
 > >1. 可以使用skelton(骨架屏)，先繪出網頁的雛形(但沒圖片、文字等內容，類似 wireframe)，等資料載入完成再繪製到網頁上。  
-> > 2.  移除造成阻塞渲染的資源: 可以先使用 lighthouse 偵測出那些資源是載入後沒有被立即使用的(non-critical)，再用以下的方始處理這些資源。
+> > 2.  移除造成阻塞渲染的資源: 可以先使用 lighthouse 偵測出哪些資源是載入後沒有被立即使用的(non-critical)，再用以下的方始處理這些資源。
 > > > 1. stylesheet: 把critical 的 stylesheet 從 URL引入改成從行內引入，其餘的 non-critical 使用 preload 屬性下載 
 > > > 2. script: 將critical 的 code 移到行內的 script tag，就不須再載入造成阻塞。其餘 non-critical 的 code 視情況加入defer 或 async 屬性。
 > > 3.  設定不同 media query 之下的style sheet，如此一來 first paint 時只會受到符合 user 的設備的stylesheet阻塞。
