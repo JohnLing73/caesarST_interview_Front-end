@@ -20,7 +20,7 @@
 > > 2. Server 設備效能低下
 
 3. 當頁面進入到 FMP 時，需要進入到最後一個完整畫面，我們會盡量避免畫面跳動，此時可以使用哪些模組？或者哪些技巧讓載入狀況較為順暢，請試著舉例。
-> 可使用 [FastDom](https://github.com/wilsonpage/fastdom)，可將 DOM 的 read/ write 各自分離避免reflow的狀況發生，讓畫面載入較為順暢。
+> 可使用 [FastDom](https://github.com/wilsonpage/fastdom)，可將 DOM 的 read/ write 各自分離，先行讀取在寫入，避免reflow的狀況發生，讓畫面載入較為順暢。
 4. 排版
 ```html
 <!DOCTYPE html>
